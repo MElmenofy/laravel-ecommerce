@@ -1,0 +1,20 @@
+.navbar-nav .nav-item .nav-link .badge-counter {
+    position: absolute;
+    transform: scale(0.7);
+    transform-origin: top right;
+    right: .50rem;
+    border-radius: 100%;
+    margin-top: -.25rem;
+}
+
+.withoutAfter::after{
+    display: none; !important;
+}
+
+
+.notification-dropdown {
+    left: -19rem !important;
+}
+.notification-dropdown::before {
+    left: 19.50rem !important;
+}
