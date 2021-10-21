@@ -8,10 +8,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="{{ route('frontend.index') }}">Home</a>
+                        <a class="nav-link {{  in_array(Route::currentRouteName(),['frontend.index'])? 'active' : ''}}" href="{{ route('frontend.index') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('frontend.shop') }}">Shop</a>
+                        <a class="nav-link {{ in_array(Route::currentRouteName(),['frontend.shop'])? 'active' : ''}}" href="{{ route('frontend.shop') }}">Shop</a>
                     </li>
 {{--                    <li class="nav-item">--}}
 {{--                        <a class="nav-link" href="{{ route('frontend.product') }}">Product detail</a>--}}

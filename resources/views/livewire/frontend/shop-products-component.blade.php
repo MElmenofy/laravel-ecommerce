@@ -67,7 +67,7 @@
                     </div>
                     <div class="row">
                         @forelse($products as $product)
-                            <div class="col-4" id="products-container-area">
+                            <div class="col-lg-4 col-md-6 col-sm-12" id="products-container-area">
                                 <div class="product text-center">
                                     <div class="mb-3 position-relative">
                                         <div class="badge text-white badge-"></div>
@@ -116,18 +116,36 @@
             Array.prototype.forEach.call(product_blocks, function (product_block) {
                 if (product_block.classList.contains('col-6')) { // اذا كانت تحتوي على  col-6
                     product_block.classList.remove('col-6');
-                    product_block.classList.add('col-4');
+                    product_block.classList.add('col-lg-4');
                 }
             });
         }
 
         document.getElementById('two_items').onclick = function () {
             Array.prototype.forEach.call(product_blocks, function (product_block) {
-                if (product_block.classList.contains('col-4')) {
-                    product_block.classList.remove('col-4');
+                if (product_block.classList.contains('col-lg-4')) {
+                    product_block.classList.remove('col-lg-4');
                     product_block.classList.add('col-6');
                 }
             });
+
+
+        // document.getElementById('three_items').onclick = function () {
+        //     Array.prototype.forEach.call(product_blocks, function (product_block) {
+        //         if (product_block.classList.contains('col-6')) { // اذا كانت تحتوي على  col-6
+        //             product_block.classList.remove('col-6');
+        //             product_block.classList.add('col-4');
+        //         }
+        //     });
+        // }
+        //
+        // document.getElementById('two_items').onclick = function () {
+        //     Array.prototype.forEach.call(product_blocks, function (product_block) {
+        //         if (product_block.classList.contains('col-4')) {
+        //             product_block.classList.remove('col-4');
+        //             product_block.classList.add('col-6');
+        //         }
+        //     });
         }
     </script>
 @endsection
